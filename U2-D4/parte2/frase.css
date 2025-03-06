@@ -8,3 +8,60 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#testoAlternato {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  align-items: center;
+  border: 2px solid black;
+  padding: 10px;
+}
+div p {
+  display: flex;
+  justify-content: space-between;
+}
+.parole {
+  color: #7a8d9c;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.parole i {
+  padding: 20px;
+}
+.parole i:nth-child(1) {
+  opacity: 0;
+  animation: scorrimento-1 10s linear;
+}
+.parole i:nth-child(2) {
+  opacity: 0;
+  animation: scorrimento-1 10s infinite linear;
+  animation-delay: 2s;
+}
+.parole:nth-child(3) {
+  opacity: 0;
+  animation: scorrimento-1 10s infinite linear;
+  animation-delay: 5s;
+}
+
+@keyframes scorrimento-1 {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(40px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}

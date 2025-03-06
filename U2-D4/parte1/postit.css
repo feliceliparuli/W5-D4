@@ -1,0 +1,50 @@
+body {
+  background-color: #666666;
+  font-family: cursive;
+}
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+article {
+  width: 250px;
+  height: 200px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: inset 1px -18px 40px -22px #000000, 5px 5px 10px 0px #000000;
+  animation: postit-start 1s linear 0s 1;
+}
+.postit-1,
+.postit-5,
+.postit-7 {
+  background-color: #f9facc;
+  transform: rotate(-5deg);
+}
+.postit-3,
+.postit-6 {
+  background-color: #c5c5ed;
+  transform: rotate(-5deg);
+}
+.postit-2,
+.postit-4,
+.postit-8 {
+  background-color: #d0f6cc;
+  transform: rotate(5deg) translateZ(50px);
+}
+article:hover {
+  transform: rotate(0deg);
+  scale: 1.1;
+}
+@keyframes postit-start {
+  0% {
+    transform: scale(1.1) rotate(0deg);
+  }
+}
